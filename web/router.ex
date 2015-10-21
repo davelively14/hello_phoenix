@@ -20,13 +20,19 @@ defmodule HelloPhoenix.Router do
     resources "users", UserController do
       resources "posts", PostController
      end
+
+     # NOTE: more dummy controllers
+     resources "reviews", ReviewController
   end
 
   # NOTE: no controllers within this scope exist. Used here only to show examples of scoped routes.
-  scope "/admin" do
+  # as: :admin will differentiate this path helper from standard review path helper by adding admin_ to beginning
+  scope "/admin", HelloPhoenix.Admin, as: :admin do
     pipe_through :browser
 
-    resources "/reviews", HelloPhoenix.Admin.ReviewController
+    resources "/images", ImageController
+    resources "/reviews", ReviewController
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.
