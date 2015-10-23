@@ -23,6 +23,7 @@ defmodule HelloPhoenix.Router do
 
      # NOTE: more dummy controllers
      resources "reviews", ReviewController
+     resources "/images", ImageController
   end
 
   # NOTE: no controllers within this scope exist. Used here only to show examples of scoped routes.
