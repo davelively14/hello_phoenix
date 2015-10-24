@@ -1,3 +1,6 @@
 <div class="jumbotron">
 	<h2>Hello World, from Atlanta!</h2>
+	<p>
+    This is the story of how to build a Phoenix app. This feels like rails - definitely has ruby influences - yet it's faster, has better concurrency, and should the back end for most of my apps from this point forward.
+  </p>
 </div>
